@@ -1,3 +1,4 @@
+pub mod fixtures;
 pub mod repo;
 
 #[cfg(test)]

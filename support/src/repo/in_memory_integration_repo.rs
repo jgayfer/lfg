@@ -24,6 +24,8 @@ impl IntegrationRepo for InMemoryIntegrationRepo {
 
 #[cfg(test)]
 mod tests {
+    use crate::fixtures::TestIntegration;
+
     use super::*;
 
     #[tokio::test]
@@ -37,7 +39,7 @@ mod tests {
 
     #[tokio::test]
     async fn find_some() {
-        let integration = Integration { id: 1 };
+        let integration = TestIntegration::new().id(1).build();
         let integrations = HashMap::from([(1, integration.clone())]);
         let repo = InMemoryIntegrationRepo::new(integrations);
 
