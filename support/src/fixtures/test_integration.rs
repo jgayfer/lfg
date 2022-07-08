@@ -24,3 +24,22 @@ impl TestIntegration {
         self.integration
     }
 }
+
+pub struct TestNewIntegration {
+    new_integration: NewIntegration,
+}
+
+impl TestNewIntegration {
+    pub fn new() -> Self {
+        Self {
+            new_integration: NewIntegration {
+                webhook_url: "https://test-webhook.com".into(),
+                success_url: "https://test-success.com".into(),
+            },
+        }
+    }
+
+    pub fn build(self) -> NewIntegration {
+        self.new_integration
+    }
+}
