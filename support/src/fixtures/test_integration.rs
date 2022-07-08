@@ -1,7 +1,5 @@
 use lfg_core::model::Integration;
 
-use super::TestUser;
-
 pub struct TestIntegration {
     integration: Integration,
 }
@@ -11,7 +9,6 @@ impl TestIntegration {
         Self {
             integration: Integration {
                 id: 1,
-                owner: TestUser::new().build(),
                 webhook_url: "https://test-webhook.com".into(),
                 success_url: "https://test-success.com".into(),
             },
