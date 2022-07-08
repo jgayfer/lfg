@@ -10,3 +10,8 @@ impl PartialEq for Integration {
         self.id == other.id
     }
 }
+
+pub struct NewIntegration {
+    pub webhook_url: String,
+    pub success_url: String,
+}
