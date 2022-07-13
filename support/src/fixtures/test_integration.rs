@@ -1,4 +1,4 @@
-use lfg_core::model::Integration;
+use lfg_core::model::{Integration, NewIntegration};
 
 pub struct TestIntegration {
     integration: Integration,
